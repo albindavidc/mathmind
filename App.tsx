@@ -86,7 +86,7 @@ const App: React.FC = () => {
           <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-neon-purple/10 rounded-full blur-3xl opacity-50"></div>
         </div>
 
-        <div className="w-full max-w-md bg-gray-900/80 backdrop-blur-xl border border-gray-800 rounded-3xl shadow-2xl overflow-hidden relative z-10 flex flex-col transition-all duration-300 max-h-[90vh] h-[600px]">
+        <div className="w-full max-w-md bg-gray-900/80 backdrop-blur-xl border border-gray-800 rounded-3xl shadow-2xl overflow-hidden relative z-10 flex flex-col transition-all duration-300 max-h-[90vh]">
           
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-gray-800 bg-gray-900/50">
@@ -106,22 +106,22 @@ const App: React.FC = () => {
           {/* Display Area */}
           <div 
               ref={displayRef}
-              className="flex-shrink-0 px-6 pb-6 pt-4 flex flex-col justify-end text-right transition-all duration-300 h-40"
+              className="flex-shrink-0 px-6 pb-6 pt-4 flex flex-col justify-end text-right transition-all duration-300 h-32"
           >
             {/* Input Echo */}
-            <div className="text-gray-400 text-lg mb-2 font-mono break-words h-12 overflow-hidden text-ellipsis opacity-75">
+            <div className="text-gray-400 text-lg mb-2 font-mono break-words h-8 overflow-hidden text-ellipsis opacity-75">
                {input}
             </div>
             
             {/* Main Result */}
-            <div className={`font-mono font-bold text-white break-all leading-none transition-all ${displayResult.length > 10 ? 'text-4xl' : 'text-6xl'} ${displayResult === 'Thinking...' ? 'animate-pulse text-neon-purple' : ''}`}>
+            <div className={`font-mono font-bold text-white break-all leading-none transition-all ${displayResult.length > 10 ? 'text-4xl' : 'text-5xl'} ${displayResult === 'Thinking...' ? 'animate-pulse text-neon-purple' : ''}`}>
                {displayResult || '0'}
             </div>
           </div>
 
           {/* Dynamic Content Area */}
-          <div className="flex-1 bg-gray-900 overflow-hidden relative border-t border-gray-800">
-              <div className="h-full flex flex-col justify-end">
+          <div className="bg-gray-900 overflow-hidden relative border-t border-gray-800">
+              <div className="flex flex-col justify-end">
                   <Calculator 
                       onInput={handleStandardInput}
                       onClear={clearInput}

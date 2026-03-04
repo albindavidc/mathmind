@@ -26,11 +26,3 @@ export const CALCULATOR_BUTTONS: KeypadButton[] = [
   { label: '⌫', value: 'backspace', type: 'action' },
   { label: '=', value: '=', type: 'action', className: 'bg-neon-blue text-black font-bold' },
 ];
-
-export const AI_SUGGESTIONS = [
-  "Solve 2x^2 + 5x - 3 = 0",
-  "Calculate the volume of a sphere with radius 5cm",
-  "Convert 150 USD to EUR",
-  "Explain the Pythagorean theorem",
-  "What is the derivative of sin(x) * x^2?"
-];

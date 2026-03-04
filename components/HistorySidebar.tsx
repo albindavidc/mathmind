@@ -1,5 +1,5 @@
 import React from 'react';
-import { HistoryItem, CalculatorMode } from '../types';
+import { HistoryItem } from '../types';
 
 interface HistorySidebarProps {
   history: HistoryItem[];
@@ -40,7 +40,7 @@ const HistorySidebar: React.FC<HistorySidebarProps> = ({ history, isOpen, onClos
             history.map((item) => (
               <div key={item.id} className="bg-gray-800 rounded-lg p-3 border border-gray-700 relative group">
                 <div className="flex justify-between items-start mb-1">
-                  <span className={`text-xs font-bold px-1.5 py-0.5 rounded ${item.type === CalculatorMode.AI ? 'bg-purple-900 text-purple-200' : 'bg-blue-900 text-blue-200'}`}>
+                  <span className="text-xs font-bold px-1.5 py-0.5 rounded bg-blue-900 text-blue-200">
                     {item.type}
                   </span>
                   <span className="text-xs text-gray-500">
@@ -49,17 +49,6 @@ const HistorySidebar: React.FC<HistorySidebarProps> = ({ history, isOpen, onClos
                 </div>
                 <div className="text-gray-400 text-sm break-words mb-1 font-mono">{item.expression}</div>
                 <div className="text-neon-green text-lg font-bold text-right break-all">{item.result}</div>
-                
-                {item.details && item.details.length > 0 && (
-                  <div className="mt-2 pt-2 border-t border-gray-700">
-                    <p className="text-xs text-gray-400 mb-1">Steps:</p>
-                    <ul className="list-disc list-inside text-xs text-gray-300 space-y-1">
-                      {item.details.map((step, i) => (
-                        <li key={i}>{step}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
               </div>
             ))
           )}

@@ -1,12 +1,5 @@
 export enum CalculatorMode {
-  STANDARD = 'STANDARD',
-  AI = 'AI'
-}
-
-export interface MathResponse {
-  answer: string;
-  steps: string[];
-  reasoning: string;
+  STANDARD = 'STANDARD'
 }
 
 export interface HistoryItem {
@@ -15,7 +8,6 @@ export interface HistoryItem {
   result: string;
   type: CalculatorMode;
   timestamp: number;
-  details?: string[]; // Steps for AI answers
 }
 
 export interface KeypadButton {

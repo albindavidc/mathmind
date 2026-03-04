@@ -1,8 +1,8 @@
-# 🔢 **MathMind – AI-Powered Math Intelligence**
+# 🔢 **MathMind – Standard Calculator**
 
-A hybrid **AI + Standard Calculator** built with **React, TypeScript, and Vite**, enhanced by **Google Gemini 2.5 Flash** for solving complex mathematical problems, showing reasoning, and providing step-by-step solutions.
+A modern **Standard Calculator** built with **React, TypeScript, and Vite**.
 
-MathMind combines speed, clarity, and intelligence—perfect for students, engineers, and anyone working with numbers.
+MathMind combines speed, clarity, and beautiful design—perfect for students, engineers, and anyone working with numbers.
 
 ---
 
@@ -22,25 +22,10 @@ https://albindavidc.github.io/MathMind/
 * Clean, monospace display
 * Error handling & input sanitization
 
-### 🤖 **AI Solver Mode (Gemini 2.5 Flash)**
-
-* Natural language math questions
-* Solves:
-
-  * Algebra
-  * Word problems
-  * Geometry
-  * Derivatives
-  * Unit conversions
-  * Multi-step reasoning
-* Structured JSON response:
-  **answer + steps + reasoning**
-
 ### 📜 **History Sidebar**
 
-* Stores both AI and standard calculations
+* Stores calculations
 * Timestamped logs
-* Step-by-step explanations
 * One-click clear
 
 ### ✨ **Beautiful UI & Animations**
@@ -68,7 +53,6 @@ albindavidc-mathmind/
 │── metadata.json
 │
 ├── components/
-│   ├── AIInterface.tsx
 │   ├── Calculator.tsx
 │   ├── HistorySidebar.tsx
 │   └── SplashScreen.tsx
@@ -93,34 +77,10 @@ albindavidc-mathmind/
 * Vite
 * PWA
 
-### **AI**
-
-* Google Gemini 2.5 Flash
-* JSON schema-driven responses
-* Structured math reasoning
-
 ### **Deployment**
 
 * GitHub Actions
 * GitHub Pages
-
----
-
-## 🛠️ **Environment Variables**
-
-MathMind uses an API key for Gemini.
-
-Set this in your GitHub repo:
-
-```
-Settings → Secrets → Actions → New Secret → API_KEY
-```
-
-The app automatically picks it from:
-
-```ts
-process.env.API_KEY
-```
 
 ---
 
@@ -176,32 +136,6 @@ Done. Every push updates the live site.
 
 ---
 
-## 🧠 **AI Mode Details**
-
-MathMind sends structured requests to Gemini:
-
-### Input
-
-User prompt or math problem.
-
-### Output Schema
-
-```json
-{
-  "answer": "string",
-  "steps": ["string"],
-  "reasoning": "string"
-}
-```
-
-The interface displays:
-
-* The final answer
-* Steps (in the History Sidebar)
-* A brief reasoning section
-
----
-
 ## 🧼 **Code Quality**
 
 Configured with:
@@ -218,14 +152,6 @@ Configured with:
 
 Pull requests are welcome!
 Open issues, submit improvements, or request features.
-
----
-
-## 🔒 **Security**
-
-* API key stored via GitHub Secrets
-* Build injects environment-based secure keys
-* No API key appears in version control
 
 ---
 

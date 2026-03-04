@@ -16,7 +16,7 @@ You must return the response in a structured JSON format.
 export const solveWithGemini = async (prompt: string): Promise<MathResponse> => {
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
+      model: "gemini-3-flash-preview",
       contents: prompt,
       config: {
         systemInstruction: SYSTEM_INSTRUCTION,

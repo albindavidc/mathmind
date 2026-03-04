@@ -1,5 +1,5 @@
 {
-  "name": "MathMind",
-  "description": "A hybrid calculator combining a standard high-speed arithmetic interface with a conversational AI mode powered by Gemini 2.5 Flash for solving complex word problems, algebraic equations, and explaining math concepts.",
+  "name": "mathmind-react",
+  "description": "A hybrid calculator combining a standard high-speed arithmetic interface with a conversational AI mode powered by Gemini 3.1 Pro Preview for solving complex word problems, algebraic equations, and explaining math concepts.",
   "requestFramePermissions": []
 }

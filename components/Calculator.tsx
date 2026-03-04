@@ -24,7 +24,7 @@ const Calculator: React.FC<CalculatorProps> = ({ onInput, onClear, onDelete, onC
   };
 
   return (
-    <div className="grid grid-cols-4 gap-2 p-3 bg-gray-900 rounded-2xl shadow-inner border border-gray-800">
+    <div className="grid grid-cols-4 gap-2 px-3 pb-3 pt-6 bg-gray-900 rounded-2xl shadow-inner border border-gray-800">
       {CALCULATOR_BUTTONS.map((btn) => (
         <button
           key={btn.label}

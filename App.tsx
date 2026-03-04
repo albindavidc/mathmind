@@ -111,7 +111,7 @@ const App: React.FC = () => {
           <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-neon-purple/10 rounded-full blur-3xl opacity-50"></div>
         </div>
 
-        <div className="w-full max-w-md bg-gray-900/80 backdrop-blur-xl border border-gray-800 rounded-3xl shadow-2xl overflow-hidden relative z-10 flex flex-col h-[800px] max-h-[90vh]">
+        <div className={`w-full max-w-md bg-gray-900/80 backdrop-blur-xl border border-gray-800 rounded-3xl shadow-2xl overflow-hidden relative z-10 flex flex-col transition-all duration-300 max-h-[90vh] ${mode === CalculatorMode.AI ? 'h-[800px]' : 'h-[600px]'}`}>
           
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-gray-800 bg-gray-900/50">
